@@ -1,29 +1,16 @@
 package com.qualizeal.javaapp06.operation;
-public class FibonacciSeries{
-	public String defineFibonacciSeries(){
-      return "FibonacciSeries";
-		
-    }
-	public String generateFibonacciSeries(int num1){
-		if(num1 < 0){
-			return "-1";
+
+public class FibonacciSeries {
+	String s = "";
+
+	public String defFibonacciSeries() {
+		return "FibonacciSeries";
+	}
+
+	public int generateFibonacciSeries(int n) {
+		if (n <= 1) {
+			return n;
 		}
-		
-		else if(num1 == 0){
-			return "-2";
-		}
-		
-		else{
-			String result="0";
-			int first=0,second=1;
-			while(second <= num1){
-				result=result+", "+second;
-				int next=first+second;
-				first=second;
-				second=next;
-			}
-			return result;
-		}
-		
+		return generateFibonacciSeries(n - 1) + generateFibonacciSeries(n - 2);
 	}
 }
