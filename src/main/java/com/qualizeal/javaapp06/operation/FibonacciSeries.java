@@ -10,7 +10,7 @@ public class FibonacciSeries {
 		
 		int a = 0;
 		int b = 1;
-		int next = 0;
+	        next = 0;
 		String str = " "; 
 		
 		
