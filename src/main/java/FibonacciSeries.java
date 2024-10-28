@@ -5,6 +5,7 @@ public class FibonacciSeries{
 		
     }
 	public String generateFibonacciSeries(int num1){
+		
 		if(num1 < 0){
 			return "-1";
 		}
@@ -14,16 +15,22 @@ public class FibonacciSeries{
 		}
 		
 		else{
+			
+			
+			int first=0,second=1,next=0;
 			String result="0";
-			int first=0,second=1;
+			
 			while(second <= num1){
+				
 				result=result+", "+second;
-				int next=first+second;
+				next=first+second;
 				first=second;
 				second=next;
 			}
+			
 			return result;
 		}
+		
 		
 	}
 }
