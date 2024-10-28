@@ -4,24 +4,23 @@ public class FibonacciSeries{
       return "FibonacciSeries";
 		
     }
-	public String generateFibonacciSeries(int num){
-		if(num<0){
+	public String generateFibonacciSeries(int num1){
+		if(num1 < 0){
 			return "-1";
 		}
 		
-		else if(num == 0){
+		else if(num1 == 0){
 			return "-2";
 		}
 		
 		else{
-			String result = "0, 1";
-			int a=0,b=1,i=2,c=0;
-			while((c+a) <= num) {
-				c=a+b;
-				a=b;
-				b=c;
-				i=i+1;
-				result = result+','+' '+c;
+			String result="0";
+			int first=0,second=1;
+			while(second <= num1){
+				result=result+", "+second;
+				int next=first+second;
+				first=second;
+				second=next;
 			}
 			return result;
 		}
